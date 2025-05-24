@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Float Layout Example</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f5f5;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            background-color: white;
+        }
+        
+        #header {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 30px 0;
+            font-size: 24px;
+            letter-spacing: 1px;
+        }
+        
+        .wrapper::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+        
+        .section {
+            box-sizing: border-box;
+            padding: 30px;
+            min-height: 300px;
+            float: left;
+            width: 33.33333%;
+            transition: all 0.3s ease;
+        }
+        
+        .section:nth-child(1) {
+            background-color: #3498db;
+            color: white;
+        }
+        
+        .section:nth-child(2) {
+            background-color: #2ecc71;
+            color: white;
+        }
+        
+        .section:nth-child(3) {
+            background-color: #e74c3c;
+            color: white;
+        }
+        
+        .section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        #footer {
+            clear: both;
+            background-color: #34495e;
+            color: white;
+            text-align: center;
+            padding: 25px 0;
+            font-size: 14px;
+        }
+        
+        @media (max-width: 768px) {
+            .section {
+                width: 100%;
+                float: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="header">Сучасний веб-дизайн</div>
+        <div class="wrapper">
+            <div class="section">
+                <h2>Веб-розробка</h2>
+                <p>Сучасні технології веб-розробки дозволяють створювати інтерактивні та адаптивні сайти, які чудово виглядають на будь-яких пристроях.</p>
+            </div>
+            <div class="section">
+                <h2>Дизайн</h2>
+                <p>Креативний підхід до дизайну та зручний інтерфейс - ключові фактори успіху будь-якого веб-проекту.</p>
+            </div>
+            <div class="section">
+                <h2>Оптимізація</h2>
+                <p>Швидкість завантаження та оптимізація для пошукових систем - важливі складові якісного веб-сайту.</p>
+            </div>
+        </div>
+        <div id="footer">
+            &copy; 2023 Усі права захищено | Створено з використанням float-верстки
+        </div>
+    </div>
+</body>
+</html>
